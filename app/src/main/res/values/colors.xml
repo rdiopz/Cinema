@@ -5,4 +5,7 @@
 
     <color name="text_color">#F1F1F1</color>
     <color name="blue">#4F71AE</color>
+    <color name="app_bg_color">#232323</color>
+    <color name="bg_person_color">#181818</color>
+    <color name="grey">#7D7E80</color>
 </resources>

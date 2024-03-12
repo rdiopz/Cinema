@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MP3player">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.241">
+
+        <ImageView
+            android:layout_marginTop="30pt"
+            android:layout_width="250dp"
+            android:layout_height="225dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.183" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30pt"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+            android:layout_width="150pt"
+            android:layout_height="1pt"
+            android:background="@color/black"
+            />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0:00"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1:00"/>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Название песни"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:paddingTop="40pt"
+            android:paddingBottom="3pt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Автор песни"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"
+            android:layout_marginBottom="20pt"
+          />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20pt">
+                >
+                <LinearLayout
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_marginRight="10pt"
+                    />
+                <LinearLayout
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_marginRight="10pt"
+                    />
+                <LinearLayout
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_marginRight="10pt"
+                    />
+                <LinearLayout
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_marginRight="10pt"
+
+                    />
+                <LinearLayout
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_marginLeft="12pt"
+                    android:layout_marginRight="40pt"
+                    />
+                <LinearLayout
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_marginRight="40pt"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,4 +3,19 @@
     <string name="onboarding_img">Onboarding img</string>
     <string name="skip_btn_text">Пропустить</string>
     <string name="next_btn">Далее</string>
+    <string name="example_mail">sample@mail.ru</string>
+    <string name="example_person">Иванов Иван</string>
+    <string name="safety">Безопасность</string>
+    <string name="cards">Карты</string>
+    <string name="notification">Уведомления</string>
+    <string name="geolocation">Геопозиция</string>
+    <string name="exit">Выход</string>
+    <string name="achievements">Достижения</string>
+    <string name="ref_system">Реферальная система</string>
+    <string name="logout">logout</string>
+    <string name="arrow">arrow</string>
+    <string name="achieves">achieves</string>
+    <string name="ref">ref</string>
+    <string name="credit_card">credit_card</string>
+    <string name="avatar">avatar</string>
 </resources>
