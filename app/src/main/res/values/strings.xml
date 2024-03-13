@@ -3,6 +3,15 @@
     <string name="onboarding_img">Onboarding img</string>
     <string name="skip_btn_text">Пропустить</string>
     <string name="next_btn">Далее</string>
+    <string name="title_1">Добро пожаловать\nв Клуб Синема!</string>
+    <string name="title_2">Смотри премьеры\nи классику в кино</string>
+    <string name="title_3">Все билеты в одном месте</string>
+    <string name="description_1" />
+    <string name="description_2">Узнавай первый о премьерах новых фильмах и пересматривай любимые фильмы в кинозале</string>
+    <string name="description_3">Покупай и используй билеты в любимых кинотеатрах в одном приложении</string>
+    <string name="start_btn_text">Начать</string>
+
+    <!--Profile-->
     <string name="example_mail">sample@mail.ru</string>
     <string name="example_person">Иванов Иван</string>
     <string name="safety">Безопасность</string>
@@ -18,4 +27,12 @@
     <string name="ref">ref</string>
     <string name="credit_card">credit_card</string>
     <string name="avatar">avatar</string>
+    <string name="main_menu_text">Главная</string>
+    <string name="cinema_menu_text">Кинотеатры</string>
+    <string name="tickets_menu_text">Билеты</string>
+    <string name="profile_menu_text">Профиль</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>

@@ -5,64 +5,70 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.example.cinema.helpers.SharedPreferencesHelper
 import org.w3c.dom.Text
 
 class OnBoarding : AppCompatActivity() {
-    private val onboardingContent: List<Map<String, Any>> = listOf(
-        mapOf(
-            "title" to "Добро пожаловать\nв Клуб Синема!",
-            "description" to "",
-            "image" to R.drawable.onboarding_img_1
-        ),
-        mapOf(
-            "title" to "Смотри премьеры и\n классику в кино",
-            "description" to "Узнавай первый о премьерах новых фильмах и пересматривай любимые фильмы в кинозале",
-            "image" to R.drawable.onboarding_img_2
-        ),
-        mapOf(
-            "title" to "Все билеты в одном месте",
-            "description" to "Покупай и используй билеты в любимых кинотеатрах в одном приложении",
-            "image" to R.drawable.onboarding_img_3
-        )
-    )
-    private var step = 0
-
+    private val onBoardingDeque: ArrayDeque<Map<String, Int>> = ArrayDeque()
     //Object
     private lateinit var onBoardingImg: ImageView
     private lateinit var onBoardingTitle: TextView
     private lateinit var onBoardingDescription: TextView
-
+    private lateinit var appSharedPreferences: SharedPreferencesHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.onboarding)
+        appSharedPreferences = SharedPreferencesHelper(this)
+
 
         onBoardingImg = findViewById(R.id.image)
         onBoardingTitle = findViewById(R.id.title)
         onBoardingDescription = findViewById(R.id.description)
-
+        onBoardingDeque.addLast(mapOf(
+            "title" to R.string.title_1,
+            "description" to R.string.description_1,
+            "image" to R.drawable.onboarding_img_1
+        ))
+        onBoardingDeque.addLast(mapOf(
+            "title" to R.string.title_2,
+            "description" to  R.string.description_2,
+            "image" to R.drawable.onboarding_img_2
+        ))
+        onBoardingDeque.addLast(mapOf(
+            "title" to R.string.title_3,
+            "description" to R.string.description_3,
+            "image" to R.drawable.onboarding_img_3
+        ))
         updateImg()
 
         //Do
         findViewById<LinearLayout>(R.id.next_btn).setOnClickListener {
-            step++
             updateImg()
         }
         findViewById<LinearLayout>(R.id.pass_btn).setOnClickListener {
-            step = 2
+            while (onBoardingDeque.size>1) onBoardingDeque.removeFirst()
             updateImg()
         }
     }
 
     private fun updateImg() {
-        if (step < 3) {
-            onBoardingImg.setImageResource(onboardingContent[step]["image"] as Int)
-            onBoardingDescription.text = onboardingContent[step]["description"] as String
-            onBoardingTitle.text = onboardingContent[step]["title"] as String
+        if (onBoardingDeque.isNotEmpty()) {
+            val stepContent: Map<String, Int> = onBoardingDeque.first()
+            onBoardingDeque.removeFirst()
 
-            if (step == 2) {
-
-                findViewById<TextView>(R.id.next_btn_text).text = "Начать"
-            }
+            onBoardingImg.setImageResource(stepContent["image"]!!)
+            onBoardingDescription.text = getString(stepContent["description"]!!)
+            onBoardingTitle.text = getString(stepContent["title"]!!)
         }
+        else {
+            appSharedPreferences.saveData("is_OnBoarding", true)
+            finish()
+        }
+        if (onBoardingDeque.isEmpty()) {
+            findViewById<TextView>(R.id.next_btn_text).text = getString(R.string.start_btn_text)
+        }
+
     }
 }
+
+

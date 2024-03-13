@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/example_mail"
                 android:fontFamily="@font/roboto_regular"
-                android:textColor="@color/grey"
+                android:textColor="@color/gray"
 
                 android:layout_marginBottom="4dp"
                 />
@@ -88,21 +88,26 @@
                 android:layout_margin="10dp"
                 android:contentDescription="@string/geolocation" />
             <TextView
-                android:layout_width="245dp"
+                android:layout_width="235dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginEnd="10dp"
                 android:text="@string/geolocation"
                 android:textSize="16sp"
-                android:textColor="@color/grey"/>
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:textColor="@color/gray"/>
+
+            <Switch
+                android:id="@+id/toggle"
+                android:layout_width="34dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:scaleType="center"
-                android:src="@drawable/keyboard_arrow_right_small"
-                android:contentDescription="@string/arrow" />
+                android:track="@drawable/custom_track"
+                android:thumb="@drawable/custom_thumb"
+                android:elevation="1dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="341dp"
@@ -125,7 +130,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/notification"
                 android:textSize="16sp"
-                android:textColor="@color/grey"/>
+                android:textColor="@color/gray"/>
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
@@ -155,7 +160,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/cards"
                 android:textSize="16sp"
-                android:textColor="@color/grey"/>
+                android:textColor="@color/gray"/>
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
@@ -185,7 +190,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/safety"
                 android:textSize="16sp"
-                android:textColor="@color/grey"/>
+                android:textColor="@color/gray"/>
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
@@ -198,6 +203,7 @@
     </LinearLayout>
     <!-- Ref,Achievements-->
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="361dp"
         android:layout_height="120dp"
         android:layout_marginTop="388dp"
@@ -216,9 +222,9 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_margin="10dp"
+                android:contentDescription="@string/achieves"
                 android:scaleType="center"
-                android:src="@drawable/stars"
-                android:contentDescription="@string/achieves" />
+                android:src="@drawable/stars" />
 
             <TextView
                 android:layout_width="245dp"
@@ -227,16 +233,16 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:text="@string/achievements"
-                android:textColor="@color/grey"
+                android:textColor="@color/gray"
                 android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
+                android:contentDescription="@string/arrow"
                 android:scaleType="center"
-                android:src="@drawable/keyboard_arrow_right_small"
-                android:contentDescription = "@string/arrow" />
+                android:src="@drawable/keyboard_arrow_right_small" />
         </LinearLayout>
 
         <LinearLayout
@@ -249,9 +255,9 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_margin="10dp"
+                android:contentDescription="@string/ref"
                 android:scaleType="center"
-                android:src="@drawable/diversity"
-                android:contentDescription="@string/ref" />
+                android:src="@drawable/diversity" />
 
             <TextView
                 android:layout_width="245dp"
@@ -260,20 +266,21 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:text="@string/ref_system"
-                android:textColor="@color/grey"
+                android:textColor="@color/gray"
                 android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
+                android:contentDescription="@string/arrow"
                 android:scaleType="center"
-                android:src="@drawable/keyboard_arrow_right_small"
-                android:contentDescription="@string/arrow" />
+                android:src="@drawable/keyboard_arrow_right_small" />
         </LinearLayout>
     </LinearLayout>
     <!-- Exit -->
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="361dp"
         android:layout_height="65dp"
         android:layout_marginTop="528dp"
@@ -293,9 +300,9 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_margin="10dp"
+                android:contentDescription="@string/logout"
                 android:scaleType="center"
-                android:src="@drawable/logout"
-                android:contentDescription="@string/logout" />
+                android:src="@drawable/logout" />
 
             <TextView
                 android:layout_width="245dp"
@@ -304,16 +311,16 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:text="@string/exit"
-                android:textColor="@color/grey"
+                android:textColor="@color/gray"
                 android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
+                android:contentDescription="@string/arrow"
                 android:scaleType="center"
-                android:src="@drawable/keyboard_arrow_right_small"
-                android:contentDescription="@string/arrow" />
+                android:src="@drawable/keyboard_arrow_right_small" />
         </LinearLayout>
     </LinearLayout>
 
