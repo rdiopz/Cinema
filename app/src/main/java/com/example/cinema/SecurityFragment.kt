@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 
-class profilePageFragment : Fragment() {
+
+class SecurityFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -16,14 +18,14 @@ class profilePageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile_page, container, false)
+        return inflater.inflate(R.layout.fragment_security, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<LinearLayout>(R.id.security).setOnClickListener {
-            findNavController().navigate(R.id.action_profilePageFragment_to_securityFragment)
+        view.findViewById<TextView>(R.id.back).setOnClickListener {
+            findNavController().navigate(R.id.action_securityFragment_to_profilePageFragment)
         }
     }
 }

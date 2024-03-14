@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".cinemaPageFragment"
+    tools:context=".SecurityFragment"
     android:background="@color/app_bg_color">
 
     <!-- TODO: Update blank fragment layout -->
@@ -15,16 +15,21 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:paddingHorizontal="30dp"
-        android:background="@color/menu_and_header">
+        android:background="@color/menu_and_header" >
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/profile"
+            android:textColor="@color/gray"
+            android:paddingRight="8dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:text="@string/cinema_menu_text"
-            android:fontFamily="@font/roboto_bold"
+            android:text="Безопасность"
             android:textColor="@color/text_color"
-            android:textSize="20sp"
-            />
-     </LinearLayout>
+            android:textSize="20sp"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
